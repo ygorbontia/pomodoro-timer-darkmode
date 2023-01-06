@@ -1,0 +1,163 @@
+@import url(./darkmode.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --fc-display: #323238;
+  --fc-controls: #323238;
+  --fc-icon-button: #323238;
+  --fc-icon-active-button: #FFFFFF;
+
+  --bgc-body: #FFFFFF;
+  --bgc-button: #E1E1E6;
+  --bgc-active-button: #02799D;
+  --bgc-input-range-bullet: #323238;
+  --bgc-active-input-range-bullet: #FFFFFF;
+  --bgc-input-range-bar: #323238;
+  --bgc-active-input-range-bar: #FFFFFF;
+}
+
+body {
+  font-size: 1.6rem;
+
+  min-height: 100vh;
+  background-color: var(--bgc-body);
+
+  display: grid;
+  place-items: center;
+}
+
+.hide {
+  display: none;
+}
+
+.change-mode {
+  position: absolute;
+  top: 6rem;
+  right: 6rem;
+}
+
+.change-mode button {
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+.container {
+  width: 82.1rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.timer {
+  width: 32.1rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.7rem;
+}
+
+.display {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12.6rem;
+  color: var(--fc-display);
+  text-align: center;
+
+  display: flex;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.controls button {
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+.controls button svg path {
+  fill: var(--fc-controls);
+}
+
+.sounds {
+  width: 30.8rem;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3.2rem;
+}
+
+.sounds button {  
+  width: 13.8rem;
+  height: 15.2rem;
+  background-color: var(--bgc-button);
+  border: none;
+  border-radius: 2.4rem;
+
+  cursor: pointer;
+}
+
+.sounds button.active {
+  background-color: var(--bgc-active-button);
+}
+
+.sounds button svg {
+  max-width: 5.6rem;
+  max-height: 5.6rem;
+
+  margin-bottom: 3.2rem;
+}
+
+.sounds button.active svg path {
+  fill: var(--fc-icon-active-button);
+}
+
+.sounds button input {
+  appearance: none;
+  -webkit-appearance: none;
+
+  width: 9rem;
+  margin: 0 auto;
+}
+
+/* Alterando o bullet do input range */
+.sounds button input::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+
+  width: 1.6rem;
+  height: 1.6rem;
+  background-color: var(--bgc-input-range-bullet);
+  border-radius: 50%;
+  margin-top: -5px;
+}
+
+.sounds button.active input::-webkit-slider-thumb {
+  background-color: var(--bgc-active-input-range-bullet);
+}
+
+/* Alterando a bar do input range */
+.sounds button input::-webkit-slider-runnable-track {
+  height: 4px;
+  background-color: var(--bgc-input-range-bar);
+}
+
+.sounds button.active input::-webkit-slider-runnable-track {
+  background-color: var(--bgc-active-input-range-bar);
+}

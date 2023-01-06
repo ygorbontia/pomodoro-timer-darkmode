@@ -1,0 +1,58 @@
+:root {
+  --fc-display-darkmode: #FFFFFF;
+  --fc-controls-darkmode: #C4C4CC;
+  --fc-icon-button-darkmode: #C4C4CC;
+  --fc-icon-active-button-darkmode: #FFFFFF;
+
+  --bgc-body-darkmode: #121214;
+  --bgc-button-darkmode: #29292E;
+  --bgc-active-button-darkmode: #0A3442;
+  --bgc-input-range-bullet-darkmode: #FFFFFF;
+  --bgc-active-input-range-bullet-darkmode: #FFFFFF;
+  --bgc-input-range-bar-darkmode: #FFFFFF;
+  --bgc-active-input-range-bar-darkmode: #FFFFFF;
+}
+
+.darkmode {
+  background-color: var(--bgc-body-darkmode);
+}
+
+.darkmode .display {
+  color: var(--fc-display-darkmode);
+}
+
+.darkmode .controls button svg path {
+  fill: var(--fc-controls-darkmode);
+}
+
+.darkmode .sounds button {
+  background-color: var(--bgc-button-darkmode);
+}
+
+.darkmode .sounds button.active {
+  background-color: var(--bgc-active-button-darkmode);
+}
+
+.darkmode .sounds button svg path {
+  fill: var(--fc-icon-button-darkmode);
+}
+
+.darkmode .sounds button.active svg path {
+  fill: var(--fc-icon-active-button-darkmode);
+}
+
+.darkmode .sounds button input::-webkit-slider-thumb {
+  background-color: var(--bgc-input-range-bullet-darkmode);
+}
+
+.darkmode .sounds button.active input::-webkit-slider-thumb {
+  background-color: var(--bgc-active-input-range-bullet-darkmode);
+}
+
+.darkmode .sounds button input::-webkit-slider-runnable-track {
+  background-color: var(--bgc-input-range-bar-darkmode);
+}
+
+.darkmode .sounds button.active input::-webkit-slider-runnable-track {
+  background-color: var(--bgc-active-input-range-bar-darkmode);
+}
